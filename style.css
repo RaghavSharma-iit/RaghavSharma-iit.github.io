@@ -118,7 +118,7 @@ nav a:hover {
     background-size: cover; /* This will fill the entire hero section */
     
     /* 4. This blends the light parts of the image, creating the watermark */
-    background-blend-mode: overlay;
+    background-blend-mode: luminosity;
 }
 
 .hero-content {
