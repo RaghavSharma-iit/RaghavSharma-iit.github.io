@@ -99,26 +99,31 @@ nav a:hover {
 #hero {
     min-height: 80vh;
     display: flex;
-    /* CHANGED: This moves the content block to the bottom */
-    align-items: flex-end; 
+    align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 100px; /* Offset for fixed header */
-    /* NEW: This adds space from the bottom edge */
-    padding-bottom: 5rem; 
     
-    /* --- WATERMARK STYLES --- */
+    /* --- NEW WATERMARK STYLES --- */
+    
+    /* 1. Set the background color to blend with */
     background-color: var(--dark-bg);
+    
+    /* 2. Add your image */
     background-image: url('https://www.dakshana.org/wp-content/uploads/2023/05/24429250592-1.jpg');
+    
+    /* 3. Set image properties */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-blend-mode: overlay;
+    background-size: cover; /* This will fill the entire hero section */
+    
+background-blend-mode: luminosity; /* This blend mode often gives a brighter, more visible image */
+
 }
 
 .hero-content {
     /* Add a subtle background to the text */
-    background-color: rgba(42, 55, 84, 0.6); /* Semi-transparent dark bg */
+    background-color: rgba(17, 24, 39, 0.4); /* Semi-transparent dark bg */
     backdrop-filter: blur(5px);
     padding: 2rem;
     border-radius: 12px;
@@ -209,8 +214,10 @@ nav a:hover {
 /* --- Footer --- */
 footer {
     text-align: center;
-    padding: 2rem;
+    /* CHANGED: Increased padding */
+    padding: 4rem 2rem; 
     color: var(--text-dark);
+    border-top: 1px solid var(--border-color); /* Add a separator line */
 }
 
 /* --- Responsive for Mobile --- */
