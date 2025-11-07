@@ -183,7 +183,6 @@ nav a:hover {
 /* --- Experience Section --- */
 #experience ul {
     list-style: none;
-    max-width: 800px;
     margin: 0 auto;
 }
 
