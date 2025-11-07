@@ -99,26 +99,21 @@ nav a:hover {
 #hero {
     min-height: 80vh;
     display: flex;
-    align-items: center;
+    /* CHANGED: This moves the content block to the bottom */
+    align-items: flex-end; 
     justify-content: center;
     text-align: center;
     padding-top: 100px; /* Offset for fixed header */
+    /* NEW: This adds space from the bottom edge */
+    padding-bottom: 5rem; 
     
-    /* --- NEW WATERMARK STYLES --- */
-    
-    /* 1. Set the background color to blend with */
+    /* --- WATERMARK STYLES --- */
     background-color: var(--dark-bg);
-    
-    /* 2. Add your image */
     background-image: url('https://www.dakshana.org/wp-content/uploads/2023/05/24429250592-1.jpg');
-    
-    /* 3. Set image properties */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* This will fill the entire hero section */
-    
-    /* 4. This blends the light parts of the image, creating the watermark */
-    background-blend-mode: luminosity;
+    background-size: cover; 
+    background-blend-mode: overlay;
 }
 
 .hero-content {
